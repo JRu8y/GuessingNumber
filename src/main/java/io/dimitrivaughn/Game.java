@@ -15,11 +15,11 @@ public class Game {
 
 
 
-    Scanner g = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     public int requestPlayerInput(){
         System.out.println("Guess a number: ");
-        guess = g.nextInt();
+        guess = scanner.nextInt();
         return guess;
     }
 
@@ -30,12 +30,12 @@ public class Game {
             count++;
             System.out.println("You have guessed " + count + " times.");
             System.out.println("Guess is too low, guess again: ");
-            guess = g.nextInt();
+            guess = scanner.nextInt();
         } else if (guess > secret) {
             count++;
             System.out.println("You have guessed " + count + " times.");
             System.out.println("Guess is too high, guess again: ");
-            guess = g.nextInt();
+            guess = scanner.nextInt();
         } else if (guess == secret) {
             correct = true;
             count++;
